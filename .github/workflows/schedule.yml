@@ -1,0 +1,12 @@
+name: Schedule
+
+on:
+  schedule:
+    - cron: "*/2 * * * *"   # <=== Change this value
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Current Time
+        run: echo "The current server time is $(date)"
